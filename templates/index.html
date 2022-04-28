@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Make Graphs By Inputing Values Of X and Y Co-Ordinate">
+    <meta name="keywords" content="Graph xy Coordinate graphmaker">
+    <meta name="author" content="Tejo Kotikalapudi">
+    <meta name="viewport" content="width=device-width,initial-scale=0.1">
+    <title>BRICS Data Analysis</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='logo3.ico')}}" type="image/x-icon">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <b class="navbar-brand">BRICS DATA ANALYSIS</b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('dashboard') }}">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('upcoming_features') }}">Upcoming Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" name="feed" href="{{ url_for('feedback') }}">Feedback!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<br>
+<br>
+<form action="/dashboard" method='post'>
+
+    <div class="container">
+
+        <div class="p-3 border bg-light">
+       <h1 class="font-weight-bold">Welcome to view various BRICS data statistics</h1>
+            <h2 class="form-control" name="value_1" >Click on Enter below to perform the SEARCH functions</h2>
+            <!-- <form action="/sub" method="POST"> -->
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+            <br>
+            <!--hr class="my-4"-->
+            <div class="text-center">
+                <button class="btn-lg btn-primary" type="submit">Enter</button>
+            </div>
+
+            <!-- </form> -->
+        </div>
+    </div>
+</form>
+
+<br>
+<br>
+<br>
+<div class="container px-4">
+    <div class="row gx-5">
+        <div class="col">
+            <div class="p-3 border bg-light">
+                <b id="graph_b">What's The BRICS?</b>
+                <p id="graph_b_p">Its the acronym coined to associate five major emerging economies: Brazil, Russia, India, China, and South Africa.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 border bg-light">
+                <b id="graph_mb">What's The BRICS Data Analysis</b>
+                <p id="graph_mb_p">This provides the relationship between countries and its economical overview taken from data since 1970.</p>
+            </div>
+        </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<h2>BRICS Demographics</h2><br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card">
+            <img src="{{url_for('static',filename='Brazil.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">1. Brazil</h5>
+                <p class="card-text">Brazil is the largest national economy in Latin America, the world's ninth largest economy and the eighth largest in
+                    purchasing power parity (PPP) according to 2018 estimates. Brazil has a mixed economy with abundant natural resources.</p>
+                <a href="https://en.wikipedia.org/wiki/Brazil" class="btn btn-primary">Explore</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="{{url_for('static',filename='Russia.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">2. Russia</h5>
+                <p class="card-text">Russia has a mixed economy, with enormous natural resources, particularly oil and natural gas.
+                    It has the world's eleventh-largest economy by nominal GDP and the sixth-largest by PPP.Russia is the world's twentieth-largest exporter and importer.</p>
+                <a href="https://en.wikipedia.org/wiki/Russia" class="btn btn-primary">Explore</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="{{url_for('static',filename='India.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">3. India</h5>
+                <p class="card-text">India is the sixth-largest economy by market exchange rates, and is the third-largest by purchasing power parity (PPP).With its
+                    average annual GDP growth rate of 5.8% over the past two decades, and India is one of the world's fastest-growing economies.</p>
+                <a href="https://en.wikipedia.org/wiki/India" class="btn btn-primary">Explore</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="{{url_for('static',filename='China.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">4. China</h5>
+                <p class="card-text">Since 2010, China has had the world's second-largest economy in terms of nominal GDP, totaling approximately
+                    US$15.66 trillion (101.6 trillion Yuan) as of 2020.[303][304] In terms of purchasing power parity (PPP GDP), China's
+                    economy has been the largest in the world since 2014, according to the World Bank.[305] China is also the world's fastest-growing major economy</p>
+                <a href="https://en.wikipedia.org/wiki/China" class="btn btn-primary">Explore</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="{{url_for('static',filename='South_Africa.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">5. South Africa</h5>
+                <p class="card-text">South Africa has a mixed economy, the second largest in Africa after Nigeria. It also has a relatively high gross
+                    domestic product (GDP) per capita compared to other countries in sub-Saharan Africa. Despite this, South Africa is still burdened by a
+                    relatively high rate of poverty and unemployment, and is also ranked in the top ten countries in the world for income inequality</p>
+                <a href="https://en.wikipedia.org/wiki/South_Africa" class="btn btn-primary">Explore</a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer class="page-footer bg-dark">
+
+    <div class="bg-success">
+        <div class="container">
+            <div class="row py-4 d-flex align-items-center">
+
+                <div class="col-md-12 text-center">
+                    <a href="https://github.com/CuriousQA"><i class="fab fa-github-square white-text mr-4"></i></a>
+                    <a href="https://www.linkedin.com/in/tejo-kotikalapudi-2028a7b5/"><i
+                            class="fab fa-linkedin-in white-text mr-4"> </i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left mt-5">
+        <div class="row">
+
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">BRICS DATA ANALYSIS</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">
+                <p class="mt-2">Thanks For Using The BRICS Data analysis.  Hope You Like and Enjoy.</p>
+            </div>
+
+
+            <div class="col-md-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+                <ul class="list-unstyled">
+                    <li class="my-2"><a href="/">Home</a></li>
+                    <li class="my-2"><a href="{{ url_for('about') }}">About</a></li>
+                    <li class="my-2"> <a href="{{ url_for('Contact') }}">Contact</a></li>
+                    <li class="my-2"> <a href="{{ url_for('feedback') }}">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+                <ul class="list-unstyled">
+                    <li class="my-2"><i class="fas fa-home mr-3"></i> Indiana University</li>
+                    <li class="my-2"><i class="fas fa-envelope mr-3"></i> tkotikal@iu.edu</li>
+                    <li class="my-2"><i class="fas fa-phone mr-3"></i> +1 704 858 5936</li>
+                    <li class="my-2"><i class="fas fa-print mr-3"></i> +1 704 858 5936</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+        <p>&copy; Copyright
+            <a href="#">Tejo@</a>
+        </p>
+        <p>Designed by Tejo Kotikalapudi</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+</body>
+
+</html>
