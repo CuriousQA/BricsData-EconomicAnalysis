@@ -50,11 +50,11 @@
 </nav>
 <br> <br> <br> <br> <br>
 <div align="center" class="button_box2">
-    <form action = "http://localhost:5000/results" method = "POST">
+    <form action = "{{ url_for('display_description') }}" method = "POST">
 
     </form>
 
-    <form action = "http://localhost:5000/results" method = "POST" class="form-wrapper-2 cf">
+    <form action = "{{ url_for('display_description') }}" method = "POST" class="form-wrapper-2 cf">
         <h1 class="font-weight-bold">Please enter the below details to view the data</h1>
         <div class="checkbox">
             <p>Check the check box for the countries for which you want to view the details(at least one)<br>&nbsp;&nbsp;&nbsp;
